@@ -1,33 +1,123 @@
-.App {
-  text-align: center;
+.Nav{
+  background: #8CBCFD;
+  color:white;
+  height:3em;
+  width: 100%;
+  padding: 1%;
+  padding-bottom:3%;
+  top:0px;
+  left:0px;
+  right:0px;
+  position: absolute;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+#form{
+  color:black;
+  background-color:#80808061 ;
+  position: absolute;
+  top:70px;
+  height:1.5em;
+  width:355px;
+  border-radius:3px;
+  padding:1%;
+}
+.locationDropDown{
+  position: relative;
+  top:100px;
+  height:3em;
+  width:50%;
+  color:black;
+  background-color: #8080801c;
+  font-size: 14px;
+  padding-left: 6%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.datepicker{
+  border-color: black;
+  border-radius:3px;
+  float:right;
+  position: relative;
+  top:98px;
+  /* background-color: #8080801c; */
+  font-size: 14px;
+  padding-left: 1%;
+  margin-left:1%;
+  height:3em;
+  width:48%;
+  font-size: 17px;
+
+}
+.dateInput{
+  font-size: 16px;
+  border-width: thin;
+  background-color: #8080801c;
+  border-color: #80808082;
+  border-radius:4px;
+  width:85%;
+  margin-left: 2%;
+  margin-top: 2%;
+  padding: 2%;
+  height:2em;
+  padding-left: 9%;
+
+}
+.formInput{
+  background-color: white;
+  width:320px;
+  position: relative;
+  border-radius:2px;
+  border-style: none;
+  margin-left:4%;
+  padding:.5%;
+  font-size: 16px;
+
+}
+
+.svg-inline--fa.fa-user.fa-w-14{
+float:right;
+font-size: 30px;
+color:white;
+position: absolute;
+right:150px;
+top:25px;
+}
+
+.svg-inline--fa.fa-calendar-alt.fa-w-14{
+  float:right;
+  font-size: 30px;
   color: white;
+  position: absolute;
+  right:90px;
+  top:25px;
 }
 
-.App-link {
-  color: #61dafb;
+.svg-inline--fa.fa-envelope.fa-w-16{
+  float:right;
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  right:30px;
+  top:25px;
+}
+.topEvents{
+  position: relative;
+  top:100px;
+}
+hr{
+  position: relative;
+  top:85px;
+}
+.NPCard{
+  position: relative;
+  top:80px;
+  width:100%;
+  margin-left: 30%;
+  align-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.npName{
+}
+
+.title{
+  padding-left: 2%;
 }

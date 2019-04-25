@@ -1,0 +1,26 @@
+[
+  {
+    "name": "ASPCA",
+    "location": "Manhattan",
+    "category": "Animal Welfare",
+    "image": "http://placehold.it/164x234"
+  },
+  {
+    "name": "Food Rescue",
+    "location": "Bronx",
+    "category": "Food",
+    "image": "http://placehold.it/164x234"
+  },
+  {
+    "name": "NYCARES",
+    "location": "Queens",
+    "category": "Variety",
+    "image": "http://placehold.it/164x234"
+  },
+  {
+    "name": "Habitat",
+    "location": "Brooklyn",
+    "category": "Construction",
+    "image": "http://placehold.it/164x234"
+  }
+]

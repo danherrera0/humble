@@ -12,7 +12,21 @@ import {withRouter} from 'react-router-dom'
 class App extends Component{
   state={
     selectValue:"",
-    selectdate:""
+    selectdate:"",
+    searchValue:"",
+    filtered_nonprofits:null
+  }
+
+  inputSearch=(e, value)=>{
+    e.preventDefault()
+
+    let filtered = nonprofits.filter(nonprofit=>{
+      return nonprofit.name.toLowerCase().includes(value)
+    })
+    this.setState({
+      filtered_nonprofits: filtered
+    })
+    console.log(e.target.value)
   }
 
   handleChange=(e)=>{
@@ -28,7 +42,7 @@ class App extends Component{
     <div className="App">
     <Nav />
 
-    <Form />
+    <Form inputSearch={this.inputSearch}/>
     <select className="locationDropDown" value={this.state.value} onChange={this.handleChange}>
     <option>Choose Location</option>
     <option value="Manhattan">Manhattan</option>
@@ -43,11 +57,9 @@ class App extends Component{
     </form>
     <h2 className="topEvents">Top Events</h2>
     <hr/>
-    {nonprofits.map(np=>{
-      return <NPCard key={np.name} np={np}/>
-    })}
-
-
+    { this.state.filtered_nonprofits!== null ? this.state.filtered_nonprofits.map(np=>{
+      return(<NPCard key={np.name} np={np}/>)}) : nonprofits.map(np=>{return(<NPCard key={np.name} np={np}/>
+    )})}
     </div>
   )
 }

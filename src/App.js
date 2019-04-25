@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import Nav from './Nav.js'
 import Form from './Form.js'
-import 'font-awesome/css/font-awesome.min.css'
 import nonprofits from './nonprofits.json'
 import NPCard from './Nonprofit.js'
 

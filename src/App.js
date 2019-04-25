@@ -19,7 +19,6 @@ class App extends Component{
 
   inputSearch=(e, value)=>{
     e.preventDefault()
-
     let filtered = nonprofits.filter(nonprofit=>{
       return nonprofit.name.toLowerCase().includes(value)
     })
@@ -29,11 +28,19 @@ class App extends Component{
     console.log(e.target.value)
   }
 
-  handleChange=(e)=>{
-    this.setState({selectValue: e.target.value})
+  locationSearch=(e)=>{
+    console.log(e.target.value);
+    // this.setState({selectValue: e.target.value})
+    let filtered = nonprofits.filter(nonprofit=>{
+      return nonprofit.location.includes(e.target.value)
+    })
+    this.setState({
+      filtered_nonprofits: filtered
+    })
   }
 
   selectDate=(e)=>{
+    console.log(e.target.value);
     this.setState({selectDate: e.target.value})
   }
 
@@ -41,9 +48,9 @@ class App extends Component{
   return (
     <div className="App">
     <Nav />
-
     <Form inputSearch={this.inputSearch}/>
-    <select className="locationDropDown" value={this.state.value} onChange={this.handleChange}>
+
+    <select className="locationDropDown" value={this.state.value} onChange={this.locationSearch}>
     <option>Choose Location</option>
     <option value="Manhattan">Manhattan</option>
     <option value="Queens">Queens</option>
@@ -52,9 +59,11 @@ class App extends Component{
     <option value="Staten Island">Staten Island</option>
     <option value="New Jersey">New Jersey</option>
     </select>
+
     <form className="datepicker">
       <input onChange={this.selectDate} value="" className="dateInput" type="date" name="date"/>
     </form>
+
     <h2 className="topEvents">Top Events</h2>
     <hr/>
     { this.state.filtered_nonprofits!== null ? this.state.filtered_nonprofits.map(np=>{

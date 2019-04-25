@@ -10,7 +10,6 @@ class Form extends Component{
 
   handleChange=(e)=>{
     this.setState({value:e.target.value},(this.props.inputSearch(e,this.state.value)))
-
   }
 
   render(){

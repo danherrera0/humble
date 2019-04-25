@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
 import Nav from './Nav.js'
+import Cal from './Cal.js'
 import Form from './Form.js'
 import nonprofits from './nonprofits.json'
 import NPCard from './Nonprofit.js'
+import { BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
+import {withRouter} from 'react-router-dom'
+
 
 class App extends Component{
   state={
@@ -20,10 +24,10 @@ class App extends Component{
   }
 
   render(){
-  console.log(nonprofits)
   return (
     <div className="App">
     <Nav />
+
     <Form />
     <select className="locationDropDown" value={this.state.value} onChange={this.handleChange}>
     <option>Choose Location</option>
@@ -35,15 +39,17 @@ class App extends Component{
     <option value="New Jersey">New Jersey</option>
     </select>
     <form className="datepicker">
-      <input onChange={this.selectDate} className="dateInput" type="date" name="date"/>
+      <input onChange={this.selectDate} value="" className="dateInput" type="date" name="date"/>
     </form>
     <h2 className="topEvents">Top Events</h2>
     <hr/>
     {nonprofits.map(np=>{
-      return <NPCard np={np}/>
+      return <NPCard key={np.name} np={np}/>
     })}
+
+
     </div>
   )
 }
 }
-export default App;
+export default withRouter(App);

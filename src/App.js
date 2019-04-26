@@ -20,7 +20,7 @@ class App extends Component{
   inputSearch=(e, value)=>{
     e.preventDefault()
     let filtered = nonprofits.filter(nonprofit=>{
-      return nonprofit.name.toLowerCase().includes(value)
+      return nonprofit.name.toLowerCase().includes(value.toLowerCase())
     })
     this.setState({
       filtered_nonprofits: filtered
@@ -61,7 +61,7 @@ class App extends Component{
     </select>
 
     <form className="datepicker">
-      <input onChange={this.selectDate} value="" className="dateInput" type="date" name="date"/>
+      <input onChange={this.selectDate} value="" placeholder="Search Date" className="dateInput" type="date" name="date"/>
     </form>
 
     <h2 className="topEvents">Top Events</h2>

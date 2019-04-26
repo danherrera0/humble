@@ -16,7 +16,7 @@ class Form extends Component{
   return (
     <form id="form" onChange={e=>this.handleChange(e)}>
     <label><i className="fas fa-search" style={{color:"white"}}></i></label>
-    <input className="formInput" style={{color:"black"}} placeholder="search organization, event, neighborhood" type="text" name="search" value={this.state.value}/>
+    <input className="formInput" style={{color:"black"}} placeholder="search by organization or event name" type="text" name="search" value={this.state.value}/>
     </form>
   )
 }

@@ -16,9 +16,19 @@ function Profile() {
       </div>
       <div className="userOrgs">
       <h1>Your organizations</h1>
+      <ul>
+      <li>Org1</li>
+      <li>Org2</li>
+      <li>Org3</li>
+      </ul>
       </div>
       <div className="userEvents">
       <h1>Your Upcoming Events</h1>
+      <ul>
+      <li>Sample Event 1</li>
+      <li>Sample Event 2</li>
+      <li>Sample Event 3</li>
+      </ul>
       </div>
     </div>
   );

@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
+import './mobile.css'
 import Nav from './Nav.js'
 import Cal from './Cal.js'
+import Profile from './Profile.js'
 import Form from './Form.js'
 import nonprofits from './nonprofits.json'
 import NPCard from './Nonprofit.js'
@@ -14,7 +16,7 @@ class App extends Component{
     selectValue:"",
     selectdate:"",
     searchValue:"",
-    filtered_nonprofits:null
+    filtered_nonprofits:null,
   }
 
   inputSearch=(e, value)=>{
@@ -42,6 +44,12 @@ class App extends Component{
   selectDate=(e)=>{
     console.log(e.target.value);
     this.setState({selectDate: e.target.value})
+  }
+
+  componentDidMount(){
+    fetch("https://swapi.co/api/people/")
+    .then(r=>r.json())
+    .then(people=>console.log(people))
   }
 
   render(){

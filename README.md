@@ -1,6 +1,27 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Personal Project, assisting in the creation of a web app that would help people connect and volunteer with non profit organizations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 In the project directory, you can run:
 
